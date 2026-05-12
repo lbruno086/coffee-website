@@ -1,47 +1,34 @@
 // Nav scroll effect
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
-});
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
 
-// Smooth appear on scroll
+// Fade-up on scroll
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+  entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.12 });
 
-document.querySelectorAll('.menu-card, .origin-card, .stat, .story-text, .story-visual').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(el);
-});
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-// CTA form
-document.querySelector('.cta-form')?.addEventListener('submit', (e) => {
-  e.preventDefault();
-});
-
-document.querySelector('.btn-primary[href="#order"]')?.addEventListener('click', (e) => {
-  e.preventDefault();
-  document.querySelector('#order').scrollIntoView({ behavior: 'smooth' });
-});
-
-// Add button feedback
+// Add to cart feedback
 document.querySelectorAll('.menu-card .btn').forEach(btn => {
-  btn.addEventListener('click', function() {
+  btn.addEventListener('click', function () {
     const original = this.textContent;
     this.textContent = '✓ Added';
     this.style.background = '#2D7A4F';
-    this.style.color = '#fff';
     setTimeout(() => {
       this.textContent = original;
       this.style.background = '';
-      this.style.color = '';
-    }, 1500);
+    }, 1600);
   });
 });
+
+// Email form
+document.querySelector('.cta-form')?.addEventListener('submit', e => e.preventDefault());
+document.querySelector('.email-input')?.closest('form')?.addEventListener('submit', e => e.preventDefault());

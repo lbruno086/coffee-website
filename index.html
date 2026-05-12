@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -21,34 +21,26 @@
         <li><a href="#origins">Origins</a></li>
         <li><a href="#visit">Visit</a></li>
       </ul>
-      <a href="#order" class="btn btn-sm">Order Now</a>
+      <a href="#order" class="btn btn-sm btn-dark">Order Now</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=80&fit=crop" alt="Coffee shop atmosphere" />
+      <div class="hero-overlay"></div>
+    </div>
     <div class="hero-content">
-      <p class="eyebrow">Single Origin · Small Batch</p>
+      <p class="eyebrow eyebrow-light">Single Origin · Small Batch</p>
       <h1 class="hero-title">Coffee roasted<br />for the curious.</h1>
-      <p class="hero-sub">We source rare beans from elevation farms,<br />roast in small batches, and deliver within 48 hours.</p>
+      <p class="hero-sub">We source rare beans from elevation farms, roast in small batches, and deliver within 48 hours.</p>
       <div class="hero-actions">
         <a href="#menu" class="btn btn-primary">Explore the Menu</a>
-        <a href="#story" class="btn btn-ghost">Our Story ↓</a>
+        <a href="#story" class="btn btn-outline-light">Our Story ↓</a>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="cup-container">
-        <div class="steam steam-1"></div>
-        <div class="steam steam-2"></div>
-        <div class="steam steam-3"></div>
-        <div class="cup-body">
-          <div class="cup-liquid"></div>
-          <div class="cup-crema"></div>
-        </div>
-        <div class="cup-handle"></div>
-        <div class="saucer"></div>
-      </div>
-    </div>
+    <div class="hero-scroll-hint">scroll</div>
   </section>
 
   <!-- STATS -->
@@ -80,22 +72,20 @@
   <section class="story section" id="story">
     <div class="container">
       <div class="story-grid">
-        <div class="story-text">
+        <div class="story-text fade-up">
           <p class="eyebrow">Our Story</p>
           <h2>Obsessed with the<br />perfect cup.</h2>
           <p class="body-text">It started in a small apartment in Buenos Aires with a hand grinder and too much time. Today we work directly with 47 farmers across 12 countries — but the obsession hasn't changed.</p>
           <p class="body-text">Every bean is traceable. Every roast is intentional. Every cup should make you pause.</p>
           <a href="#origins" class="link-arrow">Meet our farmers →</a>
         </div>
-        <div class="story-visual">
-          <div class="image-card card-warm">
-            <div class="image-placeholder">
-              <span class="placeholder-icon">☕</span>
+        <div class="story-visual fade-up">
+          <div class="photo-stack">
+            <div class="photo-card photo-back">
+              <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80&fit=crop" alt="Coffee beans roasting" />
             </div>
-          </div>
-          <div class="image-card card-accent floating">
-            <div class="image-placeholder dark">
-              <span class="placeholder-icon">🌿</span>
+            <div class="photo-card photo-front">
+              <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80&fit=crop" alt="Barista making coffee" />
             </div>
           </div>
         </div>
@@ -103,70 +93,109 @@
     </div>
   </section>
 
+  <!-- FULL WIDTH PHOTO BREAK -->
+  <section class="photo-break">
+    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1600&q=80&fit=crop" alt="Coffee farm" />
+    <div class="photo-break-text">
+      <blockquote>"Every great cup starts long before the brew."</blockquote>
+    </div>
+  </section>
+
   <!-- MENU -->
   <section class="menu section" id="menu">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header fade-up">
         <p class="eyebrow">The Menu</p>
         <h2>Crafted with intention.</h2>
-        <p class="section-sub">Each drink is designed to highlight specific flavor notes from its origin.</p>
+        <p class="section-sub">Each drink highlights specific flavor notes from its origin.</p>
       </div>
       <div class="menu-grid">
-        <div class="menu-card featured">
-          <div class="menu-card-badge">Fan Favorite</div>
-          <div class="menu-card-icon">☕</div>
-          <h3>Signature Espresso</h3>
-          <p>Ethiopia Yirgacheffe · Dark chocolate, bergamot, long finish.</p>
-          <div class="menu-card-footer">
-            <span class="price">$4.50</span>
-            <button class="btn btn-sm">Add</button>
+
+        <div class="menu-card featured fade-up">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=600&q=80&fit=crop" alt="Espresso" />
+            <div class="menu-card-badge">Fan Favorite</div>
+          </div>
+          <div class="menu-card-body">
+            <h3>Signature Espresso</h3>
+            <p>Ethiopia Yirgacheffe · Dark chocolate, bergamot, long finish.</p>
+            <div class="menu-card-footer">
+              <span class="price">$4.50</span>
+              <button class="btn btn-sm btn-dark">Add</button>
+            </div>
           </div>
         </div>
-        <div class="menu-card">
-          <div class="menu-card-icon">🥛</div>
-          <h3>Oat Flat White</h3>
-          <p>Colombia Huila · Caramel, stone fruit, silky texture.</p>
-          <div class="menu-card-footer">
-            <span class="price">$5.50</span>
-            <button class="btn btn-sm">Add</button>
+
+        <div class="menu-card fade-up">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=600&q=80&fit=crop" alt="Flat White" />
+          </div>
+          <div class="menu-card-body">
+            <h3>Oat Flat White</h3>
+            <p>Colombia Huila · Caramel, stone fruit, silky texture.</p>
+            <div class="menu-card-footer">
+              <span class="price">$5.50</span>
+              <button class="btn btn-sm btn-dark">Add</button>
+            </div>
           </div>
         </div>
-        <div class="menu-card">
-          <div class="menu-card-icon">🧊</div>
-          <h3>Cold Brew Reserve</h3>
-          <p>Guatemala Antigua · Brown sugar, dark cherry, smooth.</p>
-          <div class="menu-card-footer">
-            <span class="price">$6.00</span>
-            <button class="btn btn-sm">Add</button>
+
+        <div class="menu-card fade-up">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80&fit=crop" alt="Cold Brew" />
+          </div>
+          <div class="menu-card-body">
+            <h3>Cold Brew Reserve</h3>
+            <p>Guatemala Antigua · Brown sugar, dark cherry, smooth.</p>
+            <div class="menu-card-footer">
+              <span class="price">$6.00</span>
+              <button class="btn btn-sm btn-dark">Add</button>
+            </div>
           </div>
         </div>
-        <div class="menu-card">
-          <div class="menu-card-icon">🫖</div>
-          <h3>Pour Over</h3>
-          <p>Kenya AA · Bright citrus, black currant, clean cup.</p>
-          <div class="menu-card-footer">
-            <span class="price">$7.00</span>
-            <button class="btn btn-sm">Add</button>
+
+        <div class="menu-card fade-up">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80&fit=crop&crop=center" alt="Pour Over" />
+          </div>
+          <div class="menu-card-body">
+            <h3>Pour Over</h3>
+            <p>Kenya AA · Bright citrus, black currant, clean cup.</p>
+            <div class="menu-card-footer">
+              <span class="price">$7.00</span>
+              <button class="btn btn-sm btn-dark">Add</button>
+            </div>
           </div>
         </div>
-        <div class="menu-card">
-          <div class="menu-card-icon">✨</div>
-          <h3>Cortado</h3>
-          <p>Brazil Cerrado · Nuts, milk chocolate, balanced sweetness.</p>
-          <div class="menu-card-footer">
-            <span class="price">$4.00</span>
-            <button class="btn btn-sm">Add</button>
+
+        <div class="menu-card fade-up">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1485808191679-5f86510bd9d4?w=600&q=80&fit=crop" alt="Cortado" />
+          </div>
+          <div class="menu-card-body">
+            <h3>Cortado</h3>
+            <p>Brazil Cerrado · Nuts, milk chocolate, balanced sweetness.</p>
+            <div class="menu-card-footer">
+              <span class="price">$4.00</span>
+              <button class="btn btn-sm btn-dark">Add</button>
+            </div>
           </div>
         </div>
-        <div class="menu-card">
-          <div class="menu-card-icon">🍵</div>
-          <h3>Matcha Latte</h3>
-          <p>Ceremonial grade · Earthy, grassy, creamy oat milk.</p>
-          <div class="menu-card-footer">
-            <span class="price">$5.00</span>
-            <button class="btn btn-sm">Add</button>
+
+        <div class="menu-card fade-up">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80&fit=crop" alt="Matcha Latte" />
+          </div>
+          <div class="menu-card-body">
+            <h3>Matcha Latte</h3>
+            <p>Ceremonial grade · Earthy, grassy, creamy oat milk.</p>
+            <div class="menu-card-footer">
+              <span class="price">$5.00</span>
+              <button class="btn btn-sm btn-dark">Add</button>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -174,13 +203,19 @@
   <!-- ORIGINS -->
   <section class="origins section" id="origins">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header fade-up">
         <p class="eyebrow">Origins</p>
         <h2>Every cup has a story.</h2>
       </div>
       <div class="origins-grid">
-        <div class="origin-card">
-          <div class="origin-flag">🇪🇹</div>
+
+        <div class="origin-card fade-up">
+          <div class="origin-img">
+            <img src="https://images.unsplash.com/photo-1580087433209-9ebb80fe7f34?w=600&q=80&fit=crop" alt="Ethiopia coffee farm" />
+            <div class="origin-overlay">
+              <span class="origin-flag">🇪🇹</span>
+            </div>
+          </div>
           <div class="origin-info">
             <h4>Ethiopia</h4>
             <p>Yirgacheffe, 2,200m elevation</p>
@@ -191,8 +226,14 @@
             </div>
           </div>
         </div>
-        <div class="origin-card">
-          <div class="origin-flag">🇨🇴</div>
+
+        <div class="origin-card fade-up">
+          <div class="origin-img">
+            <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80&fit=crop" alt="Colombia coffee" />
+            <div class="origin-overlay">
+              <span class="origin-flag">🇨🇴</span>
+            </div>
+          </div>
           <div class="origin-info">
             <h4>Colombia</h4>
             <p>Huila, 1,800m elevation</p>
@@ -202,8 +243,14 @@
             </div>
           </div>
         </div>
-        <div class="origin-card">
-          <div class="origin-flag">🇬🇹</div>
+
+        <div class="origin-card fade-up">
+          <div class="origin-img">
+            <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=600&q=80&fit=crop" alt="Guatemala coffee" />
+            <div class="origin-overlay">
+              <span class="origin-flag">🇬🇹</span>
+            </div>
+          </div>
           <div class="origin-info">
             <h4>Guatemala</h4>
             <p>Antigua, 1,500m elevation</p>
@@ -213,8 +260,14 @@
             </div>
           </div>
         </div>
-        <div class="origin-card">
-          <div class="origin-flag">🇰🇪</div>
+
+        <div class="origin-card fade-up">
+          <div class="origin-img">
+            <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab12?w=600&q=80&fit=crop" alt="Kenya coffee" />
+            <div class="origin-overlay">
+              <span class="origin-flag">🇰🇪</span>
+            </div>
+          </div>
           <div class="origin-info">
             <h4>Kenya</h4>
             <p>Nyeri, 1,900m elevation</p>
@@ -224,6 +277,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -231,7 +285,10 @@
   <!-- VISIT -->
   <section class="visit section" id="visit">
     <div class="container">
-      <div class="visit-card">
+      <div class="visit-card fade-up">
+        <div class="visit-img">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=900&q=80&fit=crop" alt="Café interior" />
+        </div>
         <div class="visit-text">
           <p class="eyebrow">Visit Us</p>
           <h2>Come as you are.</h2>
@@ -241,12 +298,7 @@
             <div class="hours-row"><span>Sat – Sun</span><span>8:00 – 19:00</span></div>
           </div>
           <p class="address">📍 Palermo Soho, Buenos Aires</p>
-        </div>
-        <div class="visit-map">
-          <div class="map-placeholder">
-            <span>🗺</span>
-            <p>Palermo Soho<br />Buenos Aires</p>
-          </div>
+          <a href="#" class="btn btn-dark" style="margin-top:24px">Get Directions</a>
         </div>
       </div>
     </div>
@@ -254,11 +306,15 @@
 
   <!-- ORDER CTA -->
   <section class="cta section" id="order">
+    <div class="cta-bg">
+      <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1600&q=80&fit=crop" alt="Coffee beans" />
+      <div class="cta-overlay"></div>
+    </div>
     <div class="container">
-      <div class="cta-inner">
-        <p class="eyebrow">Order Online</p>
-        <h2>Fresh beans,<br />delivered to your door.</h2>
-        <p class="body-text">Subscribe and get a new single-origin every two weeks — roasted the day before shipping.</p>
+      <div class="cta-inner fade-up">
+        <p class="eyebrow eyebrow-light">Order Online</p>
+        <h2 class="text-white">Fresh beans,<br />delivered to your door.</h2>
+        <p class="body-text text-white-muted">Subscribe and get a new single-origin every two weeks — roasted the day before shipping.</p>
         <div class="cta-form">
           <input type="email" placeholder="your@email.com" class="email-input" />
           <button class="btn btn-primary">Get Started</button>
