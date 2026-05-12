@@ -1,4 +1,4 @@
-# Brūn Coffee — Website
+﻿# blbruno cafe — Website
 
 A beautiful, Apple-inspired landing page for an artisan coffee brand. Built with pure HTML, CSS, and JavaScript — no frameworks, no dependencies.
 
